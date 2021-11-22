@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Now</title>
+    </head>
+    <style>
+        button{
+            width: 60%;
+            height: 40px;
+            margin: 10px auto;
+            justify-content: center;
+            display: block;
+            color:cornsilk;
+            background: darkcyan;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 20px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            transition: .2s ease-in;
+            cursor: pointer;
+        }
+        button:hover{
+            background:brown;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia (serif);
+        }
+        body{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .wrapper{
+            padding: 50px 25px 0;
+            max-width: 668px;
+            width: 100%;
+            margin: auto;
+        }
+        .wrapper::before{
+            content:'';
+            position:absolute;
+            top:0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-image: url("book.png");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            z-index: -1;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+             color:thistle;
+            margin-bottom: 30px;
+        }
+        .wrapper .form{
+            max-width: 350px;
+            width: 100%;
+            margin: auto;
+        }
+        .wrapper .form-group{
+            margin-bottom: 15px; 
+        }
+        .wrapper .form-group input{
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.1px;
+            padding: 11px 15px;
+            height: 48px;
+            border-radius: 5px;
+            color:tomato;
+            border: 2px solid #00FFFF;
+            box-shadow: none;
+            width: 100%;
+        }
+        .wrapper .form-group input:focus{
+            outline: none;
+        }
+        .wrapper .form-group input::placeholder{
+            color:black;
+            font-weight: 700;
+            font-size: 15px;
+        }  
+    </style>
+    <body>
+        <div class="wrapper">
+            <div class="headline">
+                <h1>Book your tickets now</h1>
+            </div>
+            <form class="form" method="POST" action="homepage.html" onsubmit="myFunction()">
+                <div class="login">
+                    <div class="form-group">
+                        <input type="text" name="Name" placeholder="Full Name" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="Email" placeholder="Email-Id" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="Phone" placeholder="Contact-Number" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="Ticket"min="1" max="100" placeholder="Number of tickets" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="Adults" min="0" max="100" placeholder="Adults" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="Children" min="0" max="100" placeholder="Children" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Movie" placeholder="Movie Name" required="">
+                    </div>
+                    <div class="form-group">
+                        <select name="Pvr"><br>
+                            <option value="phoenix">PVR Phoenix</option>
+                            <option value="singapore">PVR Singapore</option>
+                            <option value="Saharaganj">PVR Saharaganj</option>
+                            <option value="inox">INOX</option>
+                            <option value="one">One awadh PVR</option>
+                            <option value="INOX palassio">INOX Palassio</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="Date" placeholder="Date" required="">
+                    </div>
+                    <div class="form-group">
+                     <select name="language"><br>
+                        <option value="eng">English</option>
+                        <option value="hin">Hindi</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="Payment"><br>
+                           <option value="paytm">Paytm</option>
+                           <option value="gpay">Google pay</option>
+                           <option value="dc">Debit card</option>
+                       </select>
+                       </div>
+                       <button type="submit" class="btn">Book</button>
+                       <button type="reset" class="btn">Reset</button>
+                </div>
+            </form>
+        </div>
+        <script>
+            function myFunction() {
+              alert("You have successfully booked you tickets with us! Enjoy your movie");
+            }
+        </script>
+    </body>
+</html>
