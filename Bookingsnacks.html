@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Food booking</title>
+ </head>
+ <style>
+ 	body{
+ 		margin: 0;
+ 		padding: 0;
+ 		background-image: url('food.jpg');
+ 		background-attachment: fixed;
+ 		background-size: cover;
+ 	}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 40%;
+  height: 40%;
+  padding: 15px;
+  margin-left: 25px;
+  margin-right: 35px;
+  text-align: center;
+}
+.column img{
+    height: 400px;
+    border-radius: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+        button{
+            width: 60%;
+            height: 40px;
+            margin: 10px auto;
+            justify-content: center;
+            display: block;
+            color:cornsilk;
+            background:  darkolivegreen;
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 20px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            transition: .2s ease-in;
+            cursor: pointer;
+        }
+        button:hover{
+            background: red;
+        }
+ 	
+ </style>
+ <body>
+    <div class="row">
+         <div class="column">
+         <img src="pizza.jpg" style="width:100%">
+         <button>Book</button>
+         </div>
+    <div class="column">
+        <img src="burger.jpg" style="width:100%">
+        <button>Book</button>
+    </div>
+  <div class="column">
+    <img src="momos.jpg" style="width:100%">
+    <button>Book</button>
+  </div>
+  <div class="column">
+    <img src="sandwich.jpg" style="width:100%">
+    <button>Book</button>
+  </div>
+  <div class="column">
+    <img src="popcorn.png" style="width:100%">
+    <button>Book</button>
+  </div>
+  <div class="column">
+    <img src="Chilli-paneer-dry.jpg" style="width:100%">
+    <button>Book</button>
+  </div>
+  <div class="column">
+    <img src="nachos.jpg" style="width:100%">
+    <button>Book</button>
+  </div>
+  <div class="column">
+      <img src="fries.jpg" style="width: 100%;">
+      <button>Book</button>
+  </div> 
+  </div>
+  <a href="homepage.html"><button>Homepage</button></a>
+
+ </body>
+</html>
